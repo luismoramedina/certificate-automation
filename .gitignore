@@ -1,0 +1,8 @@
+server
+crl
+ca
+user
+
+index.*
+serial
+.srl
