@@ -30,7 +30,7 @@ then
 	mkdir ./server/requests/
 fi
 
-export OPENSSL_CONF=openssl_conffig_file
+export OPENSSL_CONF=$openssl_conffig_file
 
 server=$1
 sk=./server/keys/$server.key
