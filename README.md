@@ -33,3 +33,27 @@ sh new_client_cert.sh <client-name>
 ```
 
 2.  Follow on-screen steps.
+
+### Generate the crl:
+
+1.  Execute on command line.
+
+```bash
+sh gen-crl.sh
+```
+
+### Merge p12:
+
+1.  Execute on command line.
+
+```bash
+sh export-p12.sh <server-name>
+```
+
+### Revoke server cert:
+
+1.  Execute on command line.
+
+```bash
+sh revoke_server_cert.sh <server-name>
+```

@@ -6,3 +6,5 @@ user
 index.*
 serial
 .srl
+
+password-ca.txt
