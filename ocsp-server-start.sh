@@ -1,0 +1,1 @@
+openssl ocsp -text -index index.txt -CA ./ca/ca.crt -rsigner ./server/certificates/ocsp-phoenix.crt -rkey ./server/keys/ocsp-phoenix.key -port 80
