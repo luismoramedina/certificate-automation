@@ -74,3 +74,9 @@ authorityKeyIdentifier			= keyid:always,issuer:always
 [ v3_req ]
 basicConstraints				= CA:FALSE
 subjectKeyIdentifier			= hash
+
+[ v3_serv ]
+basicConstraints=CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage=serverAuth
+crlDistributionPoints=URI:http://crls.phoenix.com/crl.crl

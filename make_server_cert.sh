@@ -4,6 +4,8 @@ hr="-------------------------------------------"
 br=""
 strength=1024
 valid=365
+openssl_conffig_file=./conf/server_openssl.cnf
+
 
 message="Usage:  sh make_server_cert.sh [your_server_name@yourdomain.com]"
 
@@ -28,7 +30,7 @@ then
 	mkdir ./server/requests/
 fi
 
-export OPENSSL_CONF=./conf/server_openssl.cnf
+export OPENSSL_CONF=openssl_conffig_file
 
 server=$1
 sk=./server/keys/$server.key
@@ -54,7 +56,7 @@ echo $hr
 echo "CA SIGNING AND ISSUING SERVER CERTIFICATE"
 echo $hr
 
-openssl x509 -req -in $sr -out $sc -CA ./ca/ca.crt -CAkey ./ca/ca.key -CAcreateserial -days $valid
+openssl x509 -req -in $sr -out $sc -CA ./ca/ca.crt -CAkey ./ca/ca.key -CAcreateserial -days $valid -extensions v3_serv -extfile $openssl_conffig_file
 
 echo $br
 echo $hr
