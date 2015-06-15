@@ -1,1 +1,1 @@
-openssl ocsp -text -index index.txt -CA ./ca/ca.crt -rsigner ./server/certificates/ocsp-phoenix.crt -rkey ./server/keys/ocsp-phoenix.key -port 8881
+openssl ocsp -ignore_err -text -index index.txt -CA ./ca/ca.crt -rsigner ./server/certificates/ocsp-phoenix.crt -rkey ./server/keys/ocsp-phoenix.key -port 8881
