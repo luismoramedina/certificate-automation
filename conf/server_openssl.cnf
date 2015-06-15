@@ -80,4 +80,4 @@ basicConstraints=CA:FALSE
 keyUsage = nonRepudiation, digitalSignature, keyEncipherment
 extendedKeyUsage=serverAuth
 crlDistributionPoints=URI:http://crls.phoenix.com/crl.crl
-authorityInfoAccess = OCSP;URI:http://ocsp.phoenix.com
+authorityInfoAccess = OCSP;URI:http://ocsp.phoenix.com:8881
