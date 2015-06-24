@@ -72,3 +72,7 @@ authorityKeyIdentifier			= keyid:always,issuer:always
 [ v3_req ]
 basicConstraints				= CA:FALSE
 subjectKeyIdentifier			= hash
+[ v3_serv ]
+basicConstraints=CA:FALSE
+crlDistributionPoints=URI:http://crls.phoenix.com/crl.crl
+authorityInfoAccess = OCSP;URI:http://ocsp.phoenix.com:8881

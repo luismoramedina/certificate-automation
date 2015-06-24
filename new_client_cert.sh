@@ -6,6 +6,8 @@ strength=1024
 valid=365
 
 message="Usage:  sh new_client_cert.sh [client_name@yourdomain.com]"
+openssl_conffig_file=./conf/client_openssl.cnf
+export OPENSSL_CONF=$openssl_conffig_file
 
 if [ $# -ne 1 ];
 then
@@ -56,7 +58,7 @@ echo $hr
 echo "CA SIGNING AND ISSUING CLIENT CERTIFICATE"
 echo $hr
 
-openssl x509 -req -in $ur -out $uc -CA ./ca/ca.crt -CAkey ./ca/ca.key -CAcreateserial -days $valid
+openssl x509 -req -in $ur -out $uc -CA ./ca/ca.crt -CAkey ./ca/ca.key -CAcreateserial -days $valid -extensions v3_serv -extfile $openssl_conffig_file
 
 echo $br
 echo $hr

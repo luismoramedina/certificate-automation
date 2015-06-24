@@ -57,3 +57,21 @@ sh export-p12.sh <server-name>
 ```bash
 sh revoke_server_cert.sh <server-name>
 ```
+
+### Start ocsp service:
+
+1.  Execute on command line.
+
+```bash
+sh ocsp-server-start.sh
+```
+
+### Make ocsp certificate:
+
+1.  Execute on command line.
+
+```bash
+sh make_ocsp_server_cert.sh <ocsp-name>
+
+```
+
